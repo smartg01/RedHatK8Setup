@@ -1,0 +1,22 @@
+SSH **Username**@IPAddress of machine
+
+##get Docker Repo
+sudo yum install -y yum-utils
+ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+    
+ ##Install Docker  
+ sudo yum install docker-ce docker-ce-cli containerd.io
+ 
+ ##Start Docker
+ sudo systemctl start docker
+
+
+#Confirm Docker is running
+
+ sudo docker run hello-world
+
+##Add the users that should have Docker access to the docker group
+
+usermod -a -G docker user1
